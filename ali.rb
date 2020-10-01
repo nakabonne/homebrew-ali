@@ -2,24 +2,24 @@
 class Ali < Formula
   desc "Generate HTTP load and plot the results in real-time"
   homepage "https://github.com/nakabonne/ali"
-  version "0.2.5"
+  version "0.3.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/nakabonne/ali/releases/download/v0.2.5/ali_0.2.5_darwin_amd64.tar.gz"
-    sha256 "2042e77f70f7688b4c27ab72fab6c8599f4c35e52837177a98941b4ac0fbea3d"
+    url "https://github.com/nakabonne/ali/releases/download/v0.3.0/ali_0.3.0_darwin_amd64.tar.gz"
+    sha256 "8d884f0bff94afed47546fcbfb7c165a1d997dda1fa501dc6d8a58e045cadf29"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/nakabonne/ali/releases/download/v0.2.5/ali_0.2.5_linux_amd64.tar.gz"
-      sha256 "8a39661a03163dbe319908913249c90012b2bb68f8c30c7be34ca6d0b55ed556"
+      url "https://github.com/nakabonne/ali/releases/download/v0.3.0/ali_0.3.0_linux_amd64.tar.gz"
+      sha256 "1ad50aed67817ea048377d2144d88cf08ddc5e8a253d9ec4fed11a52b5b47851"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/nakabonne/ali/releases/download/v0.2.5/ali_0.2.5_linux_arm64.tar.gz"
-        sha256 "5aae24bb7d777f92b1bbe919d5cdb1447ef2f0029f10633313dc2eb8b61485eb"
+        url "https://github.com/nakabonne/ali/releases/download/v0.3.0/ali_0.3.0_linux_arm64.tar.gz"
+        sha256 "5d29124a45ce2500bb3f35aa0908bca9e67b89011a69bab60db08823367ce259"
       else
-        url "https://github.com/nakabonne/ali/releases/download/v0.2.5/ali_0.2.5_linux_armv6.tar.gz"
-        sha256 "baa24cdf47108689e6e421d992ec9fb460e7ccfe0bd7183fa3fe7cf8f9c026cd"
+        url "https://github.com/nakabonne/ali/releases/download/v0.3.0/ali_0.3.0_linux_armv6.tar.gz"
+        sha256 "0ef17f32a0af7757b49ccc317c13a85511a0c94448393edbf403b111b7e3e337"
       end
     end
   end
