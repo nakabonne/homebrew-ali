@@ -5,32 +5,32 @@
 class Ali < Formula
   desc "Generate HTTP load and plot the results in real-time"
   homepage "https://github.com/nakabonne/ali"
-  version "0.7.0"
+  version "0.7.2"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nakabonne/ali/releases/download/v0.7.0/ali_0.7.0_darwin_amd64.tar.gz"
-      sha256 "b536b5444e50c22b338244a2f6a28f229f25262e64179de7d7392ebcff1ff758"
+      url "https://github.com/nakabonne/ali/releases/download/v0.7.2/ali_0.7.2_darwin_amd64.tar.gz"
+      sha256 "2fa74e2c37a126383440aa8d56d8e5e33c53215b4e534a9758b5be1926eac5bf"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nakabonne/ali/releases/download/v0.7.0/ali_0.7.0_darwin_arm64.tar.gz"
-      sha256 "9c024674d706181d38cb67871a11ffbe9b3c20acff5ce73e02833e7bedf4f82d"
+      url "https://github.com/nakabonne/ali/releases/download/v0.7.2/ali_0.7.2_darwin_arm64.tar.gz"
+      sha256 "37739dd69e39f876f2ea0551130af58565cd50a38c8e5e8908fc64cd8e6d3b18"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/nakabonne/ali/releases/download/v0.7.0/ali_0.7.0_linux_amd64.tar.gz"
-      sha256 "2d4fbd89636ef9035ce2886db1e29757e96b7f938a2e96cd81356733919d277d"
+      url "https://github.com/nakabonne/ali/releases/download/v0.7.2/ali_0.7.2_linux_amd64.tar.gz"
+      sha256 "fde180bc9607d9cf108b93478e4cc2e4f91e1abb91a8269e88c8bceabfa06e7d"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/nakabonne/ali/releases/download/v0.7.0/ali_0.7.0_linux_armv6.tar.gz"
-      sha256 "4c3840a8bfaa20a1e7318420fa6d9a88fdae7a81c5cff01c8e53ec1b2f00a849"
+      url "https://github.com/nakabonne/ali/releases/download/v0.7.2/ali_0.7.2_linux_armv6.tar.gz"
+      sha256 "e521297eb450a59dd46bef8f14156c9ae479c4899e4a1c2837e59835c33cf445"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nakabonne/ali/releases/download/v0.7.0/ali_0.7.0_linux_arm64.tar.gz"
-      sha256 "c3027be31d9d60a082465407c11f6d8cc766459f1060b3a2d2ac0855b9aee926"
+      url "https://github.com/nakabonne/ali/releases/download/v0.7.2/ali_0.7.2_linux_arm64.tar.gz"
+      sha256 "0a1618c35175c67999d37abc15ca843dbb6d858952928122e9651de92cce29f3"
     end
   end
 
