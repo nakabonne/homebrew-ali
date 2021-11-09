@@ -5,36 +5,51 @@
 class Ali < Formula
   desc "Generate HTTP load and plot the results in real-time"
   homepage "https://github.com/nakabonne/ali"
-  version "0.7.3"
-  bottle :unneeded
+  version "0.7.5"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/nakabonne/ali/releases/download/v0.7.3/ali_0.7.3_darwin_amd64.tar.gz"
-      sha256 "68f9bb579aec4b9d3ee8ea12509a617b9256d63a0ddf6e0c5aaf4c4310df9f7a"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/nakabonne/ali/releases/download/v0.7.3/ali_0.7.3_darwin_arm64.tar.gz"
-      sha256 "ffd3e3e9a52e15cd4df68ac9ad058f15ce15b07377226e7ff65ff1a737751b80"
+      url "https://github.com/nakabonne/ali/releases/download/v0.7.5/ali_0.7.5_darwin_arm64.tar.gz"
+      sha256 "784954c8d3091a20042e17a7c3245facbfcbd93579e5e342cbe55e5b66a96038"
+
+      def install
+        bin.install "ali"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/nakabonne/ali/releases/download/v0.7.5/ali_0.7.5_darwin_amd64.tar.gz"
+      sha256 "5a8ccb81734519bcef031ede21e764de101e995e3070cb45c7a60a5928dc9160"
+
+      def install
+        bin.install "ali"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/nakabonne/ali/releases/download/v0.7.3/ali_0.7.3_linux_amd64.tar.gz"
-      sha256 "5c1b2fbba57ae8f7ea4f52231a4c3c46647125ab54c3514807010f0e8e3d64e5"
-    end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/nakabonne/ali/releases/download/v0.7.3/ali_0.7.3_linux_armv6.tar.gz"
-      sha256 "3cd73802f4b31f0012a60e2cbd5952182b2e704695965b2abf6b4a195f484fd5"
+      url "https://github.com/nakabonne/ali/releases/download/v0.7.5/ali_0.7.5_linux_armv6.tar.gz"
+      sha256 "0c3471b80bf62101c429781320da6ab9a4e57dee1359e106a5fad0fa067a30d1"
+
+      def install
+        bin.install "ali"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/nakabonne/ali/releases/download/v0.7.5/ali_0.7.5_linux_amd64.tar.gz"
+      sha256 "bf3fe2d9a1b3ffda83c40dc9111b1db0557aca2847dc81764e1a6dae60e8e576"
+
+      def install
+        bin.install "ali"
+      end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nakabonne/ali/releases/download/v0.7.3/ali_0.7.3_linux_arm64.tar.gz"
-      sha256 "36492e800470ffe7c551b37b757b4937ff5852ce0019a19228040d5077ff463e"
-    end
-  end
+      url "https://github.com/nakabonne/ali/releases/download/v0.7.5/ali_0.7.5_linux_arm64.tar.gz"
+      sha256 "7786e2ceb18436c2e6b8b48c1c17803746d2ddb2b67a264b436fd0fd62ad86f1"
 
-  def install
-    bin.install "ali"
+      def install
+        bin.install "ali"
+      end
+    end
   end
 end
